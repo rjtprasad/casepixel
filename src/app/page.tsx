@@ -4,6 +4,7 @@ import UserAvatars from "@/components/UserAvatars";
 import UserRatings from "@/components/UserRatings";
 import { caseImageUrl } from "@/lib/constant";
 import { Check } from "lucide-react";
+import Image from "next/image";
 
 export default function LandingPage() {
   return (
@@ -15,7 +16,7 @@ export default function LandingPage() {
             <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
               <div className="absolute w-28 left-0 -top-20 hidden lg:block">
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t via-slate-50/50 from-slate-50 h-28" />
-                <img src="/snake-1.png" className="w-full" />
+                <Image src="/snake-1.png" alt="logo" className="w-full" width={633} height={824}/>
               </div>
               <h1 className="relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-7xl">
                 Your Image on a{" "}
@@ -35,9 +36,9 @@ export default function LandingPage() {
                     "High-quality, durable material",
                     "5 year print guarantee",
                     "Modern iPhone models supported",
-                  ].map((checklist) => (
+                  ].map((checklist, index) => (
                     <li className="flex gap-1.5 items-center text-left">
-                      <Check className="h-5 w-5 shrink-0 text-green-600" />
+                      <Check className="h-5 w-5 shrink-0 text-green-600" key={index}/>
                       {checklist}
                     </li>
                   ))}
@@ -60,13 +61,19 @@ export default function LandingPage() {
 
           <div className="col-span-full lg:col-span-1 w-full flex justify-center px-8 sm:px-16 md:px-0 mt-32 lg:mx-0 lg:mt-20 h-fit">
             <div className="relative md:max-w-xl">
-              <img
+              <Image
                 src="/your-image.png"
+                alt="your-image-text"
                 className="absolute w-40 lg:w-52 left-56 -top-20 select-none hidden sm:block lg:hidden xl:block"
+                width={619}
+                height={428}
               />
-              <img
+              <Image
                 src="/line.png"
+                alt="dash-line"
                 className="absolute w-20 -left-6 -bottom-6 select-none"
+                width={339}
+                height={608}
               />
               <Phone className="w-64" imgSrc={caseImageUrl} />
             </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 const avatars = [
     "/users/user-1.png",
@@ -11,11 +12,13 @@ const UserAvatars = () => {
   return (
     <div className="flex -space-x-4">
       {avatars.map((src, index) => (
-        <img
+        <Image
           key={index}
           className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100"
           src={src}
           alt="user image"
+          width={40}
+          height={40}
         />
       ))}
     </div>
