@@ -1,3 +1,4 @@
+import CaseSampleSection from "@/components/CaseSample";
 import { Icons } from "@/components/Icons";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Phone from "@/components/Phone";
@@ -129,7 +130,7 @@ export default function LandingPage() {
                 </div>
                 <div className="text-lg leading-8">
                   <p>
-                  &quot;{review.beforeSpanText}
+                    &quot;{review.beforeSpanText}
                     <span className="p-0.5 bg-slate-800 text-white">
                       {review.spanText}
                     </span>
@@ -156,6 +157,11 @@ export default function LandingPage() {
             ))}
           </div>
         </MaxWidthWrapper>
+
+        {/* Product Sample Section */}
+        <div className="pt-16">
+          <CaseSampleSection />
+        </div>
       </section>
     </div>
   );
