@@ -39,3 +39,10 @@ export const POSSIBLE_ANIMATION_DELAYS = [
   "0.4s",
   "0.5s",
 ];
+
+export const DemoChecklist = [
+  'High-quality silicone material',
+  'Scratch- and fingerprint resistant coating',
+  'Wireless charging compatible',
+  '5 year print warranty',
+]
