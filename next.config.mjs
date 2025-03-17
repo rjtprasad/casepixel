@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    experimental: {
+        serverActions: true, // Important for UploadThing
+      },
+};
 
 export default nextConfig;
